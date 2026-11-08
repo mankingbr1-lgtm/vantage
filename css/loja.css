@@ -1,0 +1,60 @@
+/* Visual da página Loja */
+.loja {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+.loja h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2rem, 8vw, 3rem);
+  letter-spacing: -0.02em;
+}
+.intro {
+  margin-top: 8px;
+  max-width: 34rem;
+  color: var(--texto-suave);
+}
+
+.jogo-secao {
+  margin-top: 48px;
+  scroll-margin-top: 16px;
+}
+.jogo-secao h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--violeta);
+  display: inline-block;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+.produto {
+  padding: 20px;
+  border: 1px solid #E4E6EB;
+  border-radius: 14px;
+  background: var(--branco);
+}
+.produto h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+}
+.preco {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.produto .botao {
+  display: block;
+  margin-top: 16px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .produtos { grid-template-columns: repeat(2, 1fr); }
+}
