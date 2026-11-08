@@ -1,0 +1,121 @@
+/* Cores e fontes da Vantage. Para mudar o visual, edite aqui. */
+:root {
+  --branco: #FFFFFF;
+  --cinza: #F4F5F7;
+  --grafite: #111318;
+  --texto-suave: #5B6070;
+  --violeta: #6C47FF;
+  --violeta-escuro: #5636E0;
+  --fonte-titulo: "Space Grotesk", system-ui, sans-serif;
+  --fonte-texto: "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--branco);
+  color: var(--grafite);
+  font-family: var(--fonte-texto);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--violeta); outline-offset: 3px; }
+
+/* Topo */
+.topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 16px 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--violeta);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.logo span { color: var(--grafite); }
+.menu { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 0.95rem; }
+.menu a { padding: 8px 0; color: var(--texto-suave); }
+.menu a:hover { color: var(--grafite); }
+
+/* Destaque */
+.hero {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 56px 20px 64px;
+}
+.hero h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 11vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 12ch;
+}
+.hero p {
+  margin-top: 20px;
+  max-width: 34rem;
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+}
+.botao {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  background: var(--violeta);
+  color: var(--branco);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.botao:hover { background: var(--violeta-escuro); }
+
+/* Jogos */
+.jogos {
+  background: var(--cinza);
+  padding: 40px 20px 48px;
+}
+.jogos h2, .jogos-lista { max-width: 1040px; margin-left: auto; margin-right: auto; }
+.jogos h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.jogos-lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.jogos-lista a {
+  padding: 28px 16px;
+  border-radius: 14px;
+  background: var(--branco);
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: 1px solid #E4E6EB;
+  transition: border-color 0.2s;
+}
+.jogos-lista a:hover { border-color: var(--violeta); }
+
+/* Rodapé */
+.rodape {
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 720px) {
+  .hero { padding: 96px 20px 104px; }
+  .jogos-lista { grid-template-columns: repeat(4, 1fr); }
+}
